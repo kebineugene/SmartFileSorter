@@ -1,5 +1,6 @@
-```markdown
-# 📂 SmartFileSorter
+# 📂 SmartFileSorter v5.0
+
+**[🇷 Русский](#-русский)** | **[🇬🇧 English](#-english)**
 
 **Умный сортировщик файлов с безопасным откатом и двуязычным интерфейсом**
 
@@ -10,48 +11,50 @@
 
 ---
 
+# 🇷🇺 Русский
+
+##  Что нового в v5.0
+
+- 🛡️ **Скрипт отката** — добавлен `undo_sort.bat` для возврата всех файлов на места одним кликом
+- 👁️ **Тестовый режим (Dry Run)** — анализируйте файлы без реального перемещения
+- 📅 **Сортировка по дате** — фото и видео автоматически раскладываются по папкам Год/Месяц
+-  **Многопоточность** — интерфейс остаётся отзывчивым во время сортировки
+-  **Логирование** — подробный отчёт о всех операциях в `sort_log.txt`
+- 🔒 **Обработка занятых файлов** — корректная обработка файлов, заблокированных другими программами
+- 🖱️ **Drag & Drop** — перетаскивайте папки прямо в окно приложения
+
+## ✅ Исправлено
+
+- 🐛 Исправлено зависание интерфейса при сортировке больших папок
+-  Исправлена обработка дубликатов файлов (автоматическое переименование)
+- 🐛 Убраны лишние пробелы в расширениях файлов
+
 ## ✨ Возможности
 
-- 🎯 **Умная категоризация** — автоматически определяет тип файла и перемещает в соответствующую папку
-- 📅 **Сортировка по дате** — раскладывает фото и видео по папкам Год/Месяц (на русском!)
-- 👁️ **Тестовый режим (Dry Run)** — анализирует файлы без реального перемещения
-- 🛡️ **Безопасный откат** — создаёт BAT-скрипт для возврата всех файлов на места
-- 📊 **Подробные логи** — ведёт отчёт о всех перемещениях и ошибках
-- 🎨 **Современный интерфейс** — красивый UI на CustomTkinter с поддержкой тёмной/светлой темы
-- 🖱️ **Drag & Drop** — перетаскивайте папки прямо в окно программы
-- ⚡ **Многопоточность** — интерфейс остаётся отзывчивым во время работы
-- 🔄 **Обработка дубликатов** — автоматически переименовывает файлы при конфликтах
-- 📏 **Подсчёт размера** — показывает общий размер файлов перед сортировкой
-- 🌐 **Двуязычный интерфейс** — переключение между русским и английским языками
+- 🎯 **Умная категоризация** — автоматическое определение типа файла
+-  **Сортировка по дате** — структура Год/Месяц для фото и видео
+- ️ **Тестовый режим** — предпросмотр без реальных изменений
+- ️ **Безопасный откат** — BAT-скрипт для возврата файлов
+-  **Подробные логи** — отчёт о всех перемещениях и ошибках
+- 🎨 **Современный UI** — CustomTkinter с тёмной/светлой темой
+- ️ **Drag & Drop** — перетаскивание папок в окно
+- ⚡ **Многопоточность** — интерфейс не зависает
+- 🔄 **Обработка дубликатов** — автоматическое переименование
+-  **Подсчёт размера** — показывает размер папки до сортировки
+- 🌐 **Двуязычный интерфейс** — 🇷🇺 Русский / 🇬🇧 English
 
-## 📸 Скриншоты
+##  Установка
 
-![SmartFileSorter Interface](screenshot.png)
+### Быстрый старт
+Скачайте готовый `SmartFileSorter.exe` из раздела **Releases** — установка Python не требуется!
 
-## 🚀 Установка
-
-### Требования
-
-- Python 3.8 или выше
-- Windows 10/11
-
-### Быстрый старт (для пользователей)
-
-Скачайте готовый `SmartFileSorter.exe` из релиза — установка Python не требуется!
-
-### Запуск из исходного кода (для разработчиков)
-
-**Шаг 1:** Клонирование репозитория
+### Из исходного кода
 
 ```bash
 git clone https://github.com/kebineugene/SmartFileSorter.git
 cd SmartFileSorter
-```
-
-**Шаг 2:** Установка зависимостей
-
-```bash
 pip install -r requirements.txt
+python main.py
 ```
 
 **requirements.txt:**
@@ -60,129 +63,35 @@ customtkinter>=5.2.0
 tkinterdnd2>=0.3.0
 ```
 
-**Шаг 3:** Запуск
-
-```bash
-python main.py
-```
-
 ## 📖 Использование
 
 1. **Запустите приложение**
-2. **Выберите язык** — переключатель в верхней части окна (🇷🇺 Русский / 🇬🇧 English)
-3. **Выберите папку** — нажмите «Обзор...» или перетащите папку в поле ввода
+2. **Выберите язык** — переключатель 🇺/🇬 вверху окна
+3. **Выберите папку** — кнопка «Обзор» или Drag & Drop
 4. **Настройте параметры:**
-   - ☑️ **Тестовый режим** — сначала запустите, чтобы увидеть, что будет сделано
-   - ☑️ **Сортировка по дате** — для фото и видео создаст структуру Год/Месяц
-   - ☑️ **Открыть папку после** — автоматически откроет проводник после завершения
+   - ☑️ Тестовый режим — сначала проверьте, что будет сделано
+   - ☑️ Сортировка по дате — для фото и видео
+   - ☑️ Открыть папку после завершения
 5. **Нажмите «🚀 Начать уборку»**
-6. **Подтвердите операцию** (появится предупреждение)
-7. **Дождитесь завершения** — прогресс-бар покажет статус
-8. **Проверьте результаты** — откройте `sort_log.txt` для просмотра отчёта
-
-### Категории файлов
-
-| Категория | Расширения |
-|-----------|-----------|
-| 🖼️ **Изображения** | jpg, jpeg, png, gif, bmp, svg, webp, ico |
-| 📄 **Документы** | pdf, docx, doc, txt, xlsx, xls, pptx, ppt, csv, rtf, odt |
-| 📦 **Архивы** | zip, rar, 7z, tar, gz, bz2, xz |
-| 🎵 **Музыка** | mp3, wav, flac, ogg, m4a, aac, wma |
-| 🎬 **Видео** | mp4, avi, mkv, mov, wmv, flv, webm |
-| 💿 **Программы** | exe, msi, bat, sh |
-| 💽 **Образы дисков** | iso, img, bin |
-| 🖥️ **Виртуализация** | vhd, vhdx, vmdk, qcow2, vdi, raw, ova, ovf |
-| 📁 **Разное** | все остальные файлы |
+6. **Подтвердите операцию**
+7. **Проверьте результаты** — откройте `sort_log.txt`
 
 ### Откат изменений
+1. Откройте отсортированную папку
+2. Запустите `undo_sort.bat` двойным кликом
+3. Все файлы вернутся на места
 
-Если нужно вернуть файлы на места:
-
-1. Откройте папку, которую сортировали
-2. Найдите файл `undo_sort.bat`
-3. Запустите его двойным кликом
-4. Все файлы вернутся в исходное состояние
-
-## ⚠️ Важные предупреждения
-
-- ❌ **Не используйте для сетевых папок** — может вызвать проблемы с подключением
-- ❌ **Не сортируйте открытые файлы** — закройте все программы перед запуском
-- ⚠️ **Telegram Downloads** — после сортировки старые файлы пропадут из чатов (но их можно вернуть через `undo_sort.bat`)
-- 💾 **Делайте резервные копии** — перед первой сортировкой важных данных
-- 🌐 **Язык интерфейса** — определяет названия создаваемых папок. Рекомендуется выбрать язык до начала сортировки
-
-## 🏗️ Структура проекта
+## 📁 Структура проекта
 
 ```
 SmartFileSorter/
-├── main.py              # GUI приложения (frontend)
-├── organizer.py         # Логика сортировки файлов (backend)
+├── main.py              # GUI приложения
+├── organizer.py         # Логика сортировки
 ├── i18n.py              # Модуль локализации (RU/EN)
 ├── icon.ico             # Иконка приложения
-├── requirements.txt     # Зависимости Python
-├── README.md           # Документация
-└── SmartFileSorter.exe # Готовое приложение
+├── SmartFileSorter.exe  # Готовое приложение
+── README.md            # Документация
 ```
-
-## 🛠️ Стек технологий
-
-- **Язык:** Python 3.8+
-- **GUI:** CustomTkinter (современный Tkinter)
-- **Drag & Drop:** TkinterDnD2
-- **Локализация:** Собственный модуль i18n
-- **Файловая логика:** pathlib, shutil, os
-- **Многопоточность:** threading
-
-## 🔧 Сборка приложения
-
-Для создания .exe файла:
-
-```bash
-# Установите PyInstaller
-pip install pyinstaller
-
-# Соберите приложение
-pyinstaller --noconfirm --onefile --windowed --name "SmartFileSorter" ^
-    --add-data "i18n.py;." ^
-    --add-data "organizer.py;." ^
-    --hidden-import customtkinter ^
-    --hidden-import tkinterdnd2 ^
-    --collect-all customtkinter ^
-    --collect-all tkinterdnd2 ^
-    --icon=icon.ico ^
-    main.py
-```
-
-Готовый файл появится в папке `dist/SmartFileSorter.exe`
-
-## 📝 Roadmap
-
-- [ ] Поддержка Linux и macOS
-- [ ] Настраиваемые категории файлов
-- [ ] Фильтры по размеру файлов
-- [ ] Исключения для определённых папок/файлов
-- [ ] Экспорт отчёта в CSV/JSON
-- [ ] Интеграция с облачными хранилищами
-- [ ] Автоматическое определение языка системы
-
-## 🤝 Вклад в проект
-
-Приветствуется! Если у вас есть идеи по улучшению:
-
-1. Форкните репозиторий
-2. Создайте ветку для новой функции (`git checkout -b feature/AmazingFeature`)
-3. Закоммитьте изменения (`git commit -m 'Add some AmazingFeature'`)
-4. Запушьте в ветку (`git push origin feature/AmazingFeature`)
-5. Откройте Pull Request
-
-## 📄 Лицензия
-
-Проект распространяется под лицензией MIT.
-
-## 🙏 Благодарности
-
-- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) — отличный UI фреймворк
-- [TkinterDnD2](https://github.com/TkinterDnD/TkinterDnD2) — поддержка Drag & Drop
 
 ## 📬 Контакты
 
@@ -192,5 +101,94 @@ pyinstaller --noconfirm --onefile --windowed --name "SmartFileSorter" ^
 
 ---
 
-**⭐ Если проект был полезен, поставьте звезду на GitHub!**
+# 🇬🇧 English
+
+## 🎉 What's New in v5.0
+
+- 🛡️ **Undo script** — added `undo_sort.bat` to restore all files with one click
+- 👁️ **Dry Run mode** — analyze files without actually moving them
+- 📅 **Date-based sorting** — photos and videos automatically organized into Year/Month folders
+- ⚡ **Multithreading** — interface stays responsive during sorting
+-  **Logging** — detailed report of all operations in `sort_log.txt`
+- 🔒 **Busy file handling** — proper handling of files locked by other programs
+- 🖱️ **Drag & Drop** — drop folders directly into the app window
+
+## ✅ Fixed
+
+- 🐛 Fixed interface freezing when sorting large folders
+- 🐛 Fixed duplicate file handling (automatic renaming)
+- 🐛 Removed extra spaces in file extensions
+
+## ✨ Features
+
+- 🎯 **Smart categorization** — automatic file type detection
+- 📅 **Date-based sorting** — Year/Month structure for photos and videos
+- ️ **Dry Run mode** — preview without real changes
+- 🛡️ **Safe undo** — BAT script for file restoration
+- 📊 **Detailed logs** — report of all moves and errors
+- 🎨 **Modern UI** — CustomTkinter with dark/light theme
+- 🖱️ **Drag & Drop** — drop folders into the window
+- ⚡ **Multithreading** — interface never freezes
+- 🔄 **Duplicate handling** — automatic renaming
+- 📏 **Size calculation** — shows folder size before sorting
+- 🌐 **Bilingual interface** — 🇷🇺 Русский / 🇬🇧 English
+
+## 🚀 Installation
+
+### Quick Start
+Download the ready-to-use `SmartFileSorter.exe` from **Releases** — no Python installation needed!
+
+### From source
+
+```bash
+git clone https://github.com/kebineugene/SmartFileSorter.git
+cd SmartFileSorter
+pip install -r requirements.txt
+python main.py
 ```
+
+**requirements.txt:**
+```txt
+customtkinter>=5.2.0
+tkinterdnd2>=0.3.0
+```
+
+## 📖 Usage
+
+1. **Launch the app**
+2. **Select language** — 🇷🇺/🇬🇧 toggle at the top of the window
+3. **Select a folder** — "Browse" button or Drag & Drop
+4. **Configure options:**
+   - ☑️ Dry Run — check what will be done first
+   - ☑️ Sort by date — for photos and videos
+   - ☑️ Open folder after completion
+5. **Click "🚀 Start Sorting"**
+6. **Confirm the operation**
+7. **Check results** — open `sort_log.txt`
+
+### Undoing Changes
+1. Open the sorted folder
+2. Double-click `undo_sort.bat`
+3. All files will be restored to their original locations
+
+## 📁 Project Structure
+
+```
+SmartFileSorter/
+├── main.py              # Application GUI
+├── organizer.py         # Sorting logic
+├── i18n.py              # Localization module (RU/EN)
+├── icon.ico             # App icon
+├── SmartFileSorter.exe  # Ready-to-use application
+└── README.md            # Documentation
+```
+
+## 📬 Contact
+
+**Author:** kebineugene  
+**GitHub:** [@kebineugene](https://github.com/kebineugene)  
+**Project:** [SmartFileSorter](https://github.com/kebineugene/SmartFileSorter)
+
+---
+
+**⭐ Если проект был полезен / If you found this project useful, please give it a star on GitHub!**
